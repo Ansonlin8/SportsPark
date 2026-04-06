@@ -1,0 +1,141 @@
+/* style.css - Week 2 Homework - Grid, Flex, and Accessibility */
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f9;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* --- 步骤 2: Skip to Main Content 样式 --- */
+.skip-link {
+    position: absolute;
+    top: -50px; /* 平时隐藏在屏幕上方 */
+    left: 0;
+    background: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    z-index: 100;
+    text-decoration: none;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0; /* 当使用 Tab 键聚焦时显示出来 */
+}
+
+header {
+    background-color: #2c3e50;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* --- 步骤 4: 修改 nav 为 inline-block 且宽度约为 80% --- */
+nav {
+    background-color: #34495e;
+    padding: 12px 0;
+    display: inline-block;
+    width: 80%;
+}
+
+/* --- 步骤 5: 使用后代选择器仅样式化 nav 里的图片 --- */
+nav img {
+    width: 10%;
+    border-radius: 5px; /* 稍微圆角 */
+}
+
+main {
+    background-color: #ecf0f1;
+    padding: 30px 20px;
+    font-size: 1.1rem;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 30px;
+}
+
+/* --- 步骤 3: 注释掉现有的 li 样式 --- */
+/* li {
+    display: inline-block;
+    width: 200px;
+    margin: 8px 0;
+    text-align: center;
+}
+*/
+
+h1 {
+    text-align: center;
+    font-family: 'Georgia', serif;
+    color: #ecf0f1;
+    margin: 15px 0 10px 0;
+}
+
+p {
+    line-height: 1.8;
+}
+
+/* 导航列表美化 */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #e74c3c;
+    border-radius: 5px;
+}
+
+/* --- 步骤 6 & 8: 设置 grid 类 (两列网格，每列约 40%) --- */
+.grid {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    /* 步骤 8: 调整对齐和间距 */
+    justify-content: center; /* 水平居中网格 */
+    align-items: start;     /* 顶部对齐内容 */
+    row-gap: 20px;          /* 行与行之间的间距 */
+    column-gap: 5%;         /* 两列之间的间距 */
+    margin: 20px 0;
+}
+
+/* --- 步骤 7: 使用后代选择器，仅让 grid 里的图片宽度为 100% --- */
+.grid img {
+    width: 100%;
+    margin: 0; /* 清除默认 margin 以保证网格对齐 */
+}
+
+/* --- 步骤 9: 设置 flex 类 --- */
+.flex {
+    display: flex;
+    /* 步骤 9: 调整 flex-wrap 和分布方式 */
+    flex-wrap: wrap;        /* 允许换行 */
+    justify-content: space-around; /* 图片之间均匀分布 */
+    align-items: center;
+    padding: 20px;
+}
+
+/* 样式化 flex 容器里的图片，使其排版美观 */
+.flex img {
+    width: 300px; /* 或者根据需要设置宽度 */
+    height: auto;
+    margin: 10px;
+}
+
+/* 通用图片圆角样式 */
+img {
+    border-radius: 8px;
+}
